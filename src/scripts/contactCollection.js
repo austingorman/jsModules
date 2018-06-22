@@ -1,4 +1,4 @@
-const contactList = require("./contactList")
+const contact = require("./contact")
 
 const saveDatabase = function (databaseObject, localStorageKey) {
   /*
@@ -20,7 +20,7 @@ const loadDatabase = function (localStorageKey) {
   // Use JSON.parse() to convert the string back into an object
   return JSON.parse(databaseString)
 }
-
-saveDatabase(contactList, "People")
+console.log(contact)
+saveDatabase(contact.peopleDatabase, "People")
 
 

@@ -5,12 +5,11 @@ const nameFieldEl = document.querySelector("#nameField");
 const phoneFieldEl = document.querySelector("#phoneField");
 const addressFieldEl = document.querySelector("#addressField");
 
+// when the submit button is pressed, this calls the personMaker function from the contact module and passes in the values of the forms
 document.getElementById("submitButton").addEventListener("click", function() {
+  contactPage.personMaker(nameFieldEl.value, phoneFieldEl.value, addressFieldEl.value)
   // the following 3 lines clear the fields after the submit button is clicked
-  contactPage(nameFieldEl.value, phoneFieldEl.value, addressFieldEl.value)
   nameFieldEl.value = ""
   phoneFieldEl.value = ""
   addressFieldEl.value = ""
 })
-
-// contactPage("1343", "234324", "234324")
